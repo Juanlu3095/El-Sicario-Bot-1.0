@@ -1,4 +1,4 @@
-/** El-Sicario-Bot-1.0
+/* El-Sicario-Bot-1.0
 * Author: Tale#3095
 * Summary: Última actualización del bot del Sicario para discord usando la versión v12 de discord.js
 * Date: 22-03-2022
