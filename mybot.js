@@ -1,12 +1,8 @@
 const Discord = require("discord.js");
 const client = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES", "DIRECT_MESSAGES","GUILD_PRESENCES", "GUILD_MEMBERS"], partials: ["CHANNEL"] });
-//UNE ARCHIVO CONFIG AL ARCHIVO DEL BOT
-/*const dquiz = require ('discord-quiz');*/
 const config = require("./config.json");
 const db = require("quick.db");
-/*const gonzalo = require('./prueba.js');*/
 require("./html.js");
-/*const youtube = require("yt.js")*/
 var prefix = config.prefix;
 
 ///////////////////////MENSAJE DE CONFIRMACIÓN EN LA CONSOLA//////////////////
@@ -29,7 +25,6 @@ var ayuda = function(message, client) {//variable ayuda con todos los comandos
         icon_url: avatar
       },
       title: "Comandos",
-      //url: "https://github.com/CraterMaik",
     
       fields: [
         {
@@ -210,7 +205,7 @@ var datos = function(message, client) {
         },
         
       ],
-      timestamp: new Date(),// te coge la hora actual
+      timestamp: new Date(),
       footer: {
         icon_url: client.user.avatarURL,
         text: "El Sicario"
@@ -254,9 +249,6 @@ client.on('messageCreate', message => {
     }});
 
 /////////////////////MENSAJE CAPTURAR POKÉMON s!pokemon//////////////////
-
-/*var Pokedex = 0*/
-/*var Puntos = 0*/
 
 client.on('messageCreate', message => {
   if(message.content.startsWith(prefix +"pokedex")){
@@ -534,17 +526,6 @@ client.on('messageCreate', message => {
 }}
 })
 
-/////////////////////MENSAJE GYM LEADER s!gym////////////////////////////
-
-client.on('messageCreate', message => { 
-  if (message.content.startsWith(prefix +"gym")){
-    message.channel.send({embed: {
-      color: 3447003,
-      description: "Bienvenido al castillo del Líder de Gimnasio.\nEn este modo podrás desafiar a los líderes de gimnasio y obtener sus medallas para coronarte campeón.\n\nAntes de desafiar a estos entrenadores, deberás recopilar información sobre cada uno de ellos. Para ello, deberás responder correctamente 3 preguntas por cada entrenador ejecutando el siguiente comando:\n\ns!(nombre del líder de gimnasio)(un número del 1 al 3)\nP.ej., s!brock1\n\nUna vez hayas respondido correctamente a las tres preguntas, podrás desafiarle mediante el siguiente comando:\n\ns!(nombre del líder de gimnasio)battle\nP.ej., s!brockbattle\n\n¿Tienes lo que hace falta para ser el mejor?"
-    }});
-}
-});
-
 ////////////////////////MENSAJE PARA NUEVOS MIEMBROS//////////////////////////  
 
 client.on("guildMemberAdd", (member) => {
@@ -554,40 +535,4 @@ client.on("guildMemberAdd", (member) => {
 });
 
 
-///////////////////////NOTIFICACIONES DE YOUTUBE//////////////////////////
-
-/* const channelid = "UCO-jPzEflHkb3gCxnCL94lw";
-
-const newvideo = "810241612767690752";
-
-const Youtube = require('youtube-notification');
-
-const notifier = new Youtube({
-    hubCallback: 'https://necessary-probable-slouch.glitch.me/yt',
-    secret: 'Thanks_To_Use_MY_ProJect_BY_LA|Ali#1229'
-});
-notifier.setup();
-
-notifier.on('notified', data => {
-    console.log('New Video in ${data.channel.name}');
-    client.channels.cache.get(newvideo).send(`New Video Uploaded In ${data.channel.name}, Video: ${data.channel.title},Link: ${data.channel.link}`);
-
-});
-notifier.subscribe(channelid); */
-
-
-
-/*client.on('message', message => { 
-  if(message.content.startsWith(prefix +"pepe")){
-    gonzalo.pepe(message,client);
-  }
-  });*/
-
-  /*gonzalo.pepe(message,client);*/
-
-  
-
- // end if
-
-// con esto coge los archivos del .config
 client.login(config.token);
