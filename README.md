@@ -1,4 +1,4 @@
-El-Sicario-Bot-1.0
+El-Sicario-Bot-v.1.0
 
 Author: Tale#3095
 
