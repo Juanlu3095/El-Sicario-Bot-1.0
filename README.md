@@ -12,7 +12,7 @@ Bot de Discord para el servidor 'Loncha de Quezo'. Éste cuenta con las siguient
 - Mensajes predefinidos dependiendo del mensaje enviado en el servidor de discord, puede incluir tanto texto, imágenes o las dos cosas.
 - Embed con los comandos compatibles con el bot.
 - Embed con los datos del jugador.
-- Permite capturar pokémon por rutas como si estuvieras jugando pokémon rojo y azul
+- Permite capturar pokémon por rutas como si estuvieras jugando pokémon rojo y azul.
 - Permite evolucionar pokémon.
 - Base de datos en los que se guardan los pokémon, el número de capturas y puntos logrados por el jugador.
 - Mensaje de bienvenida para nuevos miembros del servidor de discord.
